@@ -1,0 +1,5 @@
+.venv/
+MachineLearningCVE/
+cleaned_data.csv
+.gitignore
+.idea/
