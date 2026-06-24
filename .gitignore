@@ -3,3 +3,4 @@ MachineLearningCVE/
 cleaned_data.csv
 .gitignore
 .idea/
+.DS_Store

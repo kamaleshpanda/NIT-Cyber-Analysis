@@ -1,0 +1,64 @@
+# NIT Cyber Analysis — Network Intrusion Detection using CIC-IDS2017
+
+Research project on network intrusion detection using the CIC-IDS2017 dataset.
+Covers data preprocessing, exploratory analysis, and deep learning classification
+across 15 traffic categories (14 attack types + benign).
+
+---
+
+## Dataset
+
+CIC-IDS2017 — Canadian Institute for Cybersecurity
+8 CSV files, ~2.8M network flow records, 78 features + label
+Download: https://www.unb.ca/cic/datasets/ids-2017.html
+*(CSV files not tracked in this repo due to size)*
+
+---
+
+## Project Structure
+├── 01_pre-processing.ipynb   # Data cleaning pipeline
+
+├── 02_EDA.ipynb              # Exploratory analysis
+
+├── 03_modelling.ipynb        # Encoding, scaling, SMOTE, model training
+
+└── README.md
+
+---
+
+## Work Division
+
+**Undergraduate contribution (this repo):**
+- Loaded and merged all 8 CSV files into a single dataframe (~2.8M rows)
+- Handled missing values, infinite values (division-by-zero in flow features), and duplicate rows
+- Stripped column name and label whitespace inconsistencies present in the raw dataset
+- EDA: label distribution, binary vs multi-class split, correlation heatmap, outlier boxplots, feature distribution analysis
+- Modelling prep: Label Encoding, feature selection, stratified train-test split (80/20), StandardScaler, SMOTE
+
+**PhD scholar contribution:**
+- Deep learning model architecture design and training
+- Hyperparameter tuning and evaluation
+- Results analysis and benchmarking
+
+---
+
+## Pipeline
+Raw CSVs → Merge → Clean → EDA → Encode → Split → Scale → SMOTE → Model
+
+---
+
+## Setup
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
+jupyter notebook
+```
+
+Run notebooks in order: `01` → `02` → `03`
+
+---
+
+## Team
+
+NIT — B.Tech CSE + PhD Research Collaboration
+Dataset credit: Canadian Institute for Cybersecurity, University of New Brunswick
